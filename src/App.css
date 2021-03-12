@@ -201,6 +201,7 @@ Idea Board
 */
 .idea__board {
   min-height: 100px;
+  padding: 1rem 0;
   border-bottom: var(--white-2) solid 1px;
 }
 

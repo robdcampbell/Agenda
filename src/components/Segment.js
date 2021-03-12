@@ -1,16 +1,15 @@
 import React from "react";
 
-const Segment = () => {
+const Segment = ({ index }) => {
   return (
     <section className="intro__section">
       <div className="titles__intro">
         <div className="heading__left">
-          <h3>__01:</h3>
+          <h3>__0{index + 1}:</h3>
           <p>status:</p>
         </div>
         <div className="heading__right">
           <label htmlFor="">Goal: </label>
-          <h3>Pomodoro Style.</h3>
         </div>
       </div>
 

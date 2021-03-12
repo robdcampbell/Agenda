@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import IdeaBoard from "./components/IdeaBoard";
 import Intro from "./components/Intro";
 import Segment from "./components/Segment";
+import SegmentFeed from "./components/SegmentFeed";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Header />
         <Intro />
         {/* 8 SECTIONS */}
-        <Segment />
+        <SegmentFeed />
 
         <IdeaBoard />
         <Footer />

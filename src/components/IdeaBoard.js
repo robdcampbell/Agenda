@@ -4,6 +4,7 @@ const IdeaBoard = () => {
   return (
     <section className="idea__board">
       <h2>Post-it Note style Idea-Board</h2>
+      <h2>Coming Soon...</h2>
     </section>
   );
 };
