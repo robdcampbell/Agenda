@@ -1,16 +1,33 @@
 /*
 =====================
+CSS Variables 
+=====================
+*/
+
+:root {
+  /* primary/main color */
+  --rc-main-red: hsl(3, 77%, 47%);
+  --rc-main-red2: hsl(3, 47%, 68%);
+  --white-1: hsl(34, 78%, 91%);
+  --white-2: hsl(32, 22%, 75%);
+  --white-3: hsl(31, 22%, 64%);
+}
+
+/*
+=====================
 Global Styles
 =====================
 */
 
 body {
+  background: var(--rc-main-red);
   margin: 0;
-  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    sans-serif;
+  font-family: "Helvetica Neue", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: var(--white-1);
 }
 
 code {
@@ -19,15 +36,73 @@ code {
 }
 
 .App {
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*
 =====================
-...
+Heading 
 =====================
 */
 
+.heading__section {
+  width: 85%;
+  min-height: 50vh;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 0.5rem;
+  border-top: var(--white-2) solid 1px;
+  border-bottom: var(--white-2) solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.titles {
+  display: flex;
+}
+.heading__right {
+  margin-left: 5rem;
+}
+.headings__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.brand > h1 {
+  font-size: 9rem;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.brand > h4 {
+  margin: 0;
+}
+.nav__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.nav__buttons > button {
+  height: fit-content;
+  display: flex;
+  padding: 0.1rem 1rem;
+  color: var(--white-1);
+  background: var(--white-1);
+  flex-direction: column;
+  margin: 0.2rem;
+  transition: 100ms ease-in-out;
+}
+.nav__buttons > button:hover {
+  color: var(--white-3);
+  background: var(--white-3);
+  transform: scaleX(1.2);
+}
 /*
 =================================================================
 OLD
@@ -35,6 +110,8 @@ OLD
 */
 
 /* LOGO SPINNER FROM REACT */
+
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -69,3 +146,4 @@ OLD
     transform: rotate(360deg);
   }
 }
+*/
