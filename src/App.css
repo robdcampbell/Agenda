@@ -90,18 +90,21 @@ Heading
 }
 .nav__buttons > button {
   height: fit-content;
+  font-size: 0.75rem;
   display: flex;
   padding: 0.1rem 1rem;
   color: var(--white-1);
-  background: var(--white-1);
+  background: none;
+  border: none;
+  /* background: var(--white-1); */
   flex-direction: column;
   margin: 0.2rem;
   transition: 100ms ease-in-out;
 }
 .nav__buttons > button:hover {
   color: var(--white-3);
-  background: var(--white-3);
-  transform: scaleX(1.2);
+  /* background: var(--white-3); */
+  transform: scale(1.5);
 }
 /*
 =================================================================
