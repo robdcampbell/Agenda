@@ -1,6 +1,9 @@
 import "./App.css";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import IdeaBoard from "./components/IdeaBoard";
 import Intro from "./components/Intro";
+import Segment from "./components/Segment";
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
         <Header />
         <Intro />
         {/* 8 SECTIONS */}
-        {/* FOOTER */}
+        <Segment />
+
+        <IdeaBoard />
+        <Footer />
       </div>
     </div>
   );

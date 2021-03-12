@@ -108,7 +108,7 @@ Heading
 }
 .nav__buttons > button {
   height: fit-content;
-  font-size: 0.75rem;
+  font-size: 1rem;
   display: flex;
   padding: 0.1rem 1rem;
   color: var(--white-1);
@@ -125,12 +125,15 @@ Heading
   transform: scale(1.5);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .heading__section {
     margin-top: 2rem;
   }
   .titles {
     justify-content: space-between;
+  }
+  .nav__buttons > button {
+    font-size: 0.75rem;
   }
   h3 {
     font-size: 0.75rem;
@@ -171,7 +174,7 @@ Intro
   max-width: 500px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .intro__content {
     align-items: flex-start;
   }
@@ -190,6 +193,32 @@ Intro
 next...
 =====================
 */
+
+/*
+=====================
+Idea Board
+=====================
+*/
+.idea__board {
+  min-height: 100px;
+  border-bottom: var(--white-2) solid 1px;
+}
+
+/*
+=====================
+Footer
+=====================
+*/
+
+.footer__container {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__container > a {
+  text-decoration: none;
+  color: var(--white-1);
+}
 
 /*
 =================================================================
