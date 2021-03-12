@@ -1,14 +1,16 @@
 import "./App.css";
 import Header from "./components/Header";
+import Intro from "./components/Intro";
 
 function App() {
   return (
     <div className="App">
-      {/* HEADER */}
-      <Header />
-      {/* BREIF ABOUT / DAILY INTRODUCTION */}
-      {/* 8 SECTIONS */}
-      {/* FOOTER */}
+      <div className="wrapper__main">
+        <Header />
+        <Intro />
+        {/* 8 SECTIONS */}
+        {/* FOOTER */}
+      </div>
     </div>
   );
 }

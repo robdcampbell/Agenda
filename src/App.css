@@ -1,5 +1,17 @@
 /*
 =====================
+Global reset
+=====================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+=====================
 CSS Variables 
 =====================
 */
@@ -39,6 +51,10 @@ code {
   max-width: 1200px;
   margin: 0 auto;
 }
+.wrapper__main {
+  width: 95%;
+  margin: 0 auto;
+}
 
 /*
 =====================
@@ -47,11 +63,10 @@ Heading
 */
 
 .heading__section {
-  width: 85%;
   min-height: 50vh;
   margin: 0 auto;
   margin-top: 4rem;
-  padding: 0.5rem;
+  padding: 1rem;
   border-top: var(--white-2) solid 1px;
   border-bottom: var(--white-2) solid 1px;
   display: flex;
@@ -60,6 +75,9 @@ Heading
 }
 .titles {
   display: flex;
+}
+.heading__left {
+  /* line-height: 1rem; */
 }
 .heading__right {
   margin-left: 5rem;
@@ -106,6 +124,73 @@ Heading
   /* background: var(--white-3); */
   transform: scale(1.5);
 }
+
+@media screen and (max-width: 600px) {
+  .heading__section {
+    margin-top: 2rem;
+  }
+  .titles {
+    justify-content: space-between;
+  }
+  h3 {
+    font-size: 0.75rem;
+  }
+  .brand > h1 {
+    font-size: 3.5rem;
+  }
+  .brand > h4 {
+    font-size: 0.75rem;
+  }
+}
+
+/*
+=====================
+Intro
+=====================
+*/
+
+.intro__section {
+  padding: 1rem;
+  border-bottom: var(--white-2) solid 1px;
+}
+
+.titles__intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro__content {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.intro__text {
+  margin: 1rem 0;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 500px) {
+  .intro__content {
+    align-items: flex-start;
+  }
+
+  .intro__text {
+    font-size: 0.75rem;
+    max-width: 300px;
+  }
+  .heading__right > h2 {
+    font-size: 1rem;
+  }
+}
+
+/*
+=====================
+next...
+=====================
+*/
+
 /*
 =================================================================
 OLD

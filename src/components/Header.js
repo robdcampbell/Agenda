@@ -2,14 +2,14 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="heading__section">
+    <section className="heading__section">
       <div className="titles">
         <div className="heading__left">
-          <h3>heading</h3>
-          <h3>subheading</h3>
+          <h3>Daily Goals,</h3>
+          <h3>in smaller parts.</h3>
         </div>
         <div className="heading__right">
-          <h3>heading</h3>
+          <h3>01 - 08</h3>
         </div>
       </div>
 
@@ -26,10 +26,10 @@ const Header = () => {
         </div>
         <div className="brand">
           <h1>Agenda</h1>
-          <h4>_ 8 hours, let's go.</h4>
+          <h4>let's go.</h4>
         </div>
       </div>
-    </header>
+    </section>
   );
 };
 
