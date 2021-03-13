@@ -4,7 +4,7 @@ const Segment = ({ index }) => {
   const [toggleHidden, setToggleHidden] = useState(true);
 
   return (
-    <section className="hr__section">
+    <section className="hr__section" id={`section${index + 1}`}>
       <h3>__0{index + 1}:</h3>
       <button type="button" onClick={(e) => setToggleHidden(!toggleHidden)}>
         {toggleHidden ? "Show goal" : "Hide section"}

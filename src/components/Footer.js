@@ -4,7 +4,10 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer__container">
-        <h4>Agenda.</h4>
+        <a href="#top">
+          <h4> Agenda.</h4>
+        </a>
+
         <a
           href="https://www.robcampbelldev.com"
           target="_blank"
