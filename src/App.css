@@ -173,11 +173,41 @@ Intro
   justify-content: space-between;
 }
 
+.intro__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .intro__content {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.add__daily {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.add__daily > * {
+  padding: 0;
+  margin: 0;
+}
+
+.add__daily > span {
+  display: flex;
+  font-size: 4rem;
+  font-weight: 200;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro__bottom {
+  display: flex;
+  justify-content: space-between;
 }
 
 .intro__text {
@@ -214,6 +244,11 @@ Hr. Sections
   color: var(--white-1);
   font-size: 1rem;
   margin: 1rem 0;
+  transition: 100ms ease-in-out;
+}
+.hr__section > button:hover {
+  color: var(--white-3);
+  transform: scale(1.1);
 }
 
 .hidden {
