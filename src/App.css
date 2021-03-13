@@ -56,9 +56,20 @@ code {
   margin: 0 auto;
 }
 
+.add__ideas {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.add__ideas:hover {
+  color: var(--white-3);
+}
+
 /*
 =====================
-Heading 
+Hero
 =====================
 */
 
@@ -66,7 +77,7 @@ Heading
   min-height: 50vh;
   margin: 0 auto;
   margin-top: 4rem;
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
   border-top: var(--white-2) solid 1px;
   border-bottom: var(--white-2) solid 1px;
   display: flex;
@@ -107,6 +118,7 @@ Heading
   align-items: flex-end;
 }
 .nav__buttons > a {
+  text-decoration: none;
   cursor: pointer;
   height: fit-content;
   font-size: 1rem;
@@ -164,13 +176,13 @@ Intro
 */
 
 .intro__section {
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
   border-bottom: var(--white-2) solid 1px;
 }
 
-.titles__intro {
+.intro__titles {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .intro__left {
@@ -186,18 +198,7 @@ Intro
   align-items: flex-end;
 }
 
-.add__daily {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-.add__daily > * {
-  padding: 0;
-  margin: 0;
-}
-
-.add__daily > span {
+.add__ideas > span {
   display: flex;
   font-size: 4rem;
   font-weight: 200;
@@ -216,6 +217,13 @@ Intro
 }
 
 @media screen and (max-width: 800px) {
+  .intro__titles {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .intro__bottom {
+    flex-direction: column;
+  }
   .intro__content {
     align-items: flex-start;
   }

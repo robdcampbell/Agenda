@@ -7,7 +7,7 @@ const Segment = ({ index }) => {
     <section className="hr__section" id={`section${index + 1}`}>
       <h3>__0{index + 1}:</h3>
       <button type="button" onClick={(e) => setToggleHidden(!toggleHidden)}>
-        {toggleHidden ? "Show goal" : "Hide section"}
+        {toggleHidden ? "Show hour" : "Hide section"}
       </button>
       <div className={toggleHidden ? "hidden" : ""}>
         <div className="titles__intro">

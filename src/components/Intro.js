@@ -3,20 +3,12 @@ import React from "react";
 const Intro = () => {
   return (
     <section className="intro__section">
-      <div className="titles__intro">
-        <div className="intro__left">
-          <div>
-            <h3>Segment -</h3>
-            <h3>breakdown:</h3>
-          </div>
-        </div>
-        <div className="heading__right">
-          <h2>__ Pomodoro Style.</h2>
-        </div>
+      <div className="intro__titles">
+        <h2>Segments: Pomodoro Style.</h2>
       </div>
 
       <div className="intro__bottom">
-        <h3 className="add__daily">
+        <h3 className="add__ideas">
           <span>+</span> Add daily goals.
         </h3>
         <div className="intro__content">
