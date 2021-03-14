@@ -252,15 +252,37 @@ Intro
   justify-content: space-between;
 }
 
+.intro__bottom > button {
+  background: none;
+  border: var(--white-1) solid 1px;
+  border-radius: 0.5rem;
+  color: var(--white-1);
+  padding: 0 0.75rem;
+}
+
 .intro__text {
   color: var(--white-1);
   margin: 1rem 0;
-  max-width: 500px;
+  max-width: 400px;
   font-weight: 400;
 }
 
 .add__daily {
   font-size: 2rem;
+}
+.add__daily > span {
+  padding-top: 0.75rem;
+}
+.goals {
+  margin-top: 1rem;
+}
+.goals > input {
+  margin-top: 0.125rem;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.25rem;
+  color: var(--white-1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (max-width: 800px) {

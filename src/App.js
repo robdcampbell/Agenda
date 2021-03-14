@@ -1,5 +1,5 @@
 import "./App.css";
-import FlipTest from "./components/FlipTest";
+
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import IdeaBoard from "./components/IdeaBoard";
@@ -12,9 +12,7 @@ function App() {
       <div className="wrapper__main">
         <Hero />
         <Intro />
-        {/* <IdeaBoard /> */}
         {/* <FlipTest />  NOT WORKING */}
-        {/* 8 SECTIONS */}
         <SegmentFeed />
         <IdeaBoard />
         <Footer />
