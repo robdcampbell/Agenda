@@ -12,11 +12,11 @@ function App() {
       <div className="wrapper__main">
         <Hero />
         <Intro />
-        <IdeaBoard />
+        {/* <IdeaBoard /> */}
         {/* <FlipTest />  NOT WORKING */}
         {/* 8 SECTIONS */}
         <SegmentFeed />
-
+        <IdeaBoard />
         <Footer />
       </div>
     </div>

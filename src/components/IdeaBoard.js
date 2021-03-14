@@ -7,7 +7,7 @@ const IdeaBoard = () => {
       <h2>Coming Soon...</h2>
 
       <h3 className="add__ideas">
-        <span>+</span> Add daily goals.
+        <span>+</span> Add Idea.
       </h3>
     </section>
   );
