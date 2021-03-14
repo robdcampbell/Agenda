@@ -6,18 +6,21 @@ const Header = () => {
       <div className="titles" id="top">
         <div className="heading__left">
           <h3>Daily Goals,</h3>
-          <h3>in smaller parts.</h3>
+          <h3>smaller parts.</h3>
         </div>
         <div className="heading__right">
-          <button>R. /</button>
-          <button>light /</button>
-          <button>dark /</button>
+          <p>mode:</p>
+          <button>dark</button>
+          <p>|</p>
+          <button>light</button>
+          <p>|</p>
+          <button>R.</button>
         </div>
       </div>
 
       <div className="headings__bottom">
         <div className="nav__buttons">
-          <a href="#section1">_01-08</a>
+          <a href="#section1">01-08</a>
           {/* <a href="#section2">__02</a>
           <a href="#section3">__03</a>
           <a href="#section4">__04</a>
@@ -27,8 +30,7 @@ const Header = () => {
           <a href="#section8">__08</a> */}
         </div>
         <div className="brand">
-          <h1>Agenda</h1>
-          <h4>let's go.</h4>
+          <h1>Agenda.</h1>
         </div>
       </div>
     </section>

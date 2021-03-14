@@ -22,7 +22,7 @@ const Intro = () => {
           </p>
         </div>
         <h3 className="add__ideas add__daily">
-          <span>+</span> Add daily goals.
+          <span>+</span> Set daily goals.
         </h3>
       </div>
     </section>

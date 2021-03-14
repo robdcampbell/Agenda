@@ -26,13 +26,16 @@ const Segment = ({ index }) => {
       </button>
       <div className={toggleHidden ? "hidden" : ""}>
         <div className="titles__intro">
-          <div className="heading__left">
-            <p>status:</p>
+          <div className="segment__left">
+            <label>status:</label>
+            <select name="status">
+              <option value="in-progress">In-Progress</option>
+              <option value="Complete">Complete</option>
+            </select>
           </div>
           <div className="heading__right"></div>
         </div>
 
-        {/* <div className="headings__bottom"> */}
         <div className="segment__content">
           <h3>Description:</h3>
           <p className="segment__text">
@@ -40,7 +43,6 @@ const Segment = ({ index }) => {
             adipisicing elit. Repellat minus inventore id laborum alias debitis
             voluptates numquam commodi fugiat cumque!
           </p>
-          {/* </div> */}
         </div>
       </div>
     </section>
