@@ -182,10 +182,12 @@ Hero
   }
   .nav__buttons {
     margin-top: 2rem;
+    padding: 0;
   }
 
   .nav__buttons > a {
     font-size: 1.5rem;
+    padding: 0;
   }
   .headings__bottom {
     flex-direction: column;
@@ -201,6 +203,9 @@ Hero
 @media screen and (max-width: 550px) {
   .brand > h1 {
     font-size: 4rem;
+  }
+  .heading__section {
+    height: 500px;
   }
 }
 
@@ -273,6 +278,14 @@ Intro
 .add__daily > span {
   padding-top: 0.75rem;
 }
+
+.daily__goals {
+  margin-top: 2rem;
+  border-top: var(--white-1) solid 1px;
+  padding-top: 3rem;
+  transition: 200ms ease-in-out;
+}
+
 .goals {
   margin-top: 1rem;
 }
