@@ -13,11 +13,11 @@ export const useAgenda = () => {
 };
 
 export const AgendaProvider = ({ children }) => {
-  const [agenda, setAgenda] = useState("dark");
+  const [theme, setTheme] = useState("");
 
   const value = {
-    agenda,
-    setAgenda,
+    theme,
+    setTheme,
   };
 
   return (

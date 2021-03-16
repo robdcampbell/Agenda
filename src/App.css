@@ -29,6 +29,7 @@ CSS Variables
   --white-1: hsl(34, 78%, 91%);
   --white-2: hsl(32, 22%, 75%);
   --white-3: hsl(31, 22%, 64%);
+  --white-4: hsl(30, 4%, 52%);
 }
 
 /*
@@ -48,6 +49,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: var(--white-1);
+  position: relative;
 }
 
 code {
@@ -56,10 +58,10 @@ code {
 }
 
 .App {
-  max-width: 1200px;
   margin: 0 auto;
 }
 .wrapper__main {
+  max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 }
@@ -93,6 +95,7 @@ THEMES - color modes set by user
 }
 .light__theme {
   background: var(--rc-bg-light);
+  color: var(--white-1);
 }
 .pomodoro__theme {
   background: var(--rc-main-red);
@@ -107,9 +110,8 @@ Hero
 .heading__section {
   min-height: 40vh;
   margin: 0 auto;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   padding: 2rem 0rem;
-  border-top: var(--white-1) solid 1px;
   border-bottom: var(--white-1) solid 1px;
   display: flex;
   flex-direction: column;
@@ -118,6 +120,8 @@ Hero
 .titles {
   display: flex;
   justify-content: space-between;
+  padding-top: 1rem;
+  border-top: var(--white-1) solid 1px;
 }
 .heading__left {
 }
