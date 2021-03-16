@@ -1,25 +1,18 @@
 import "./App.css";
-
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import IdeaBoard from "./components/IdeaBoard";
-import Intro from "./components/Intro";
-import SegmentFeed from "./components/SegmentFeed";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AgendaProvider } from "./context/AgendaContext";
+import Home from "./components/Home";
+import Error from "./components/Error";
 
 function App() {
   return (
     <AgendaProvider>
-      <div className="App">
-        <div className="wrapper__main">
-          <Hero />
-          <Intro />
-          {/* <FlipTest />  NOT WORKING */}
-          <SegmentFeed />
-          <IdeaBoard />
-          <Footer />
-        </div>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="*" component={Error} />
+        </Switch>
+      </Router>
     </AgendaProvider>
   );
 }

@@ -12,12 +12,15 @@ const Header = () => {
           <h3>smaller parts.</h3>
         </div>
         <div className="heading__right">
+          <p>cur:{theme}</p>
           <p>mode:</p>
-          <button>dark</button>
+          <button type="button" onClick={(e) => setTheme("dark")}>
+            dark
+          </button>
           <p>|</p>
-          <button>light</button>
+          <button onClick={(e) => setTheme("light")}>light</button>
           <p>|</p>
-          <button>R.</button>
+          <button onClick={(e) => setTheme("red")}>R.</button>
         </div>
       </div>
 

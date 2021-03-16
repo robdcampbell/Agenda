@@ -39,7 +39,7 @@ Global Styles
 */
 
 body {
-  background: var(--rc-main-red);
+  background: var(--white-2);
   /* background: var(--rc-bg-light); */
   /* background: var(--rc-bg-dark); */
   margin: 0;
