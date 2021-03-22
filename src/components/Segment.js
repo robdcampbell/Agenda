@@ -1,13 +1,11 @@
 import React, { useState } from "react";
+import {useAgenda} from '../context/AgendaContext'
 
 const Segment = ({ index }) => {
   const [toggleHidden, setToggleHidden] = useState(true);
-
-  // const toggleSection = () => {
-  //   if (toggleSection) {
-  //     setToggleHidden(false);
-  //   }
-  // };
+  const {dailyGoals, setDailyGoals} = useAgenda();
+  
+  const dailySegment = `daily${index+1}`
 
   return (
     <section className="hr__segment" id={`section${index + 1}`}>
@@ -38,11 +36,11 @@ const Segment = ({ index }) => {
 
         <div className="segment__content">
           <h3>Description:</h3>
-          <p className="segment__text">
-            First things first, Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Repellat minus inventore id laborum alias debitis
-            voluptates numquam commodi fugiat cumque!
-          </p>
+          <input  className="segment__text"
+           value={dailyGoals[dailySegment]} onChange={(e)=> setDailyGoals(state => (
+             {...state,
+              test: "test"}
+           ) )} />
         </div>
       </div>
     </section>
