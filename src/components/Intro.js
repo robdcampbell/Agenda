@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import {useAgenda} from '../context/AgendaContext'
 
 const Intro = () => {
   const [showDaily, setShowDaily] = useState(false);
+  const {initialGoals, setInitialGoals} = useAgenda();
+  
 
   const submitGoals = ()=>{
     console.log("Goals test...")
@@ -12,7 +15,7 @@ const Intro = () => {
       <div className="intro__titles">
         <h2>Segments: </h2>
         <h2>Pomodoro.</h2>
-      </div>
+      </div>      
 
       <div className="intro__bottom">
         <div className="intro__content">
@@ -27,6 +30,7 @@ const Intro = () => {
             (with breaks), and keeps you from going down a rabbit hole.
           </p>
         </div>
+
         <button type="button" onClick={(e) => setShowDaily(!showDaily)}>
           {!showDaily ? (
             <h3 className="add__ideas add__daily">
@@ -42,38 +46,72 @@ const Intro = () => {
 
       <div className={showDaily ? "daily__goals" : "hidden"}>
         <h3>Tackle today.</h3>
+        
+        {/* WILL REFASCTOR WITH AN 'INITAL GOAL COMPONENT' */}
         <div className="goals">
           <label htmlFor="">_01:</label>
-          <input type="text" />
+          <input type="text" value={initialGoals.daily1} onChange={(e)=> setInitialGoals(initialState => ({
+            ...initialState,
+            daily1: e.target.value
+          }))} />
         </div>
+
         <div className="goals">
           <label htmlFor="">_02:</label>
-          <input type="text" />
+          <input type="text" value={initialGoals.daily2} onChange={(e)=> setInitialGoals(initialState => ({
+            ...initialState,
+            daily2: e.target.value
+          }))}/>
         </div>
+
         <div className="goals">
           <label htmlFor="">_03:</label>
-          <input type="text" />
+          <input type="text" value={initialGoals.daily3} onChange={(e)=> setInitialGoals(initialState => ({
+            ...initialState,
+            daily3: e.target.value
+          }))} />
         </div>
+
         <div className="goals">
           <label htmlFor="">_04:</label>
-          <input type="text" />
+          <input type="text" value={initialGoals.daily4} onChange={(e)=> setInitialGoals(initialState => ({
+            ...initialState,
+            daily4: e.target.value
+          }))} />
         </div>
+
         <div className="goals">
           <label htmlFor="">_05:</label>
-          <input type="text" />
+          <input type="text" value={initialGoals.daily5} onChange={(e)=> setInitialGoals(initialState => ({
+            ...initialState,
+            daily5: e.target.value
+          }))} />
         </div>
+
         <div className="goals">
           <label htmlFor="">_06:</label>
-          <input type="text" />
+          <input type="text" value={initialGoals.daily6} onChange={(e)=> setInitialGoals(initialState => ({
+            ...initialState,
+            daily6: e.target.value
+          }))} />
         </div>
+
         <div className="goals">
           <label htmlFor="">_07:</label>
-          <input type="text" />
+          <input type="text" value={initialGoals.daily7} onChange={(e)=> setInitialGoals(initialState => ({
+            ...initialState,
+            daily7: e.target.value
+          }))} />
         </div>
+
         <div className="goals">
           <label htmlFor="">_08:</label>
-          <input type="text" />
+          <input type="text" value={initialGoals.daily8} onChange={(e)=> setInitialGoals(initialState => ({
+            ...initialState,
+            daily8: e.target.value
+          }))} />
         </div>
+
          <button type="button" className="submitGoals__btn" onClick={(e)=>submitGoals()} >Submit Daily Goals</button>
       </div> 
     </section>

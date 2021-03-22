@@ -17,22 +17,26 @@ export const useAgenda = () => {
 export const AgendaProvider = ({ children }) => {
 
   const initialBlank = {
-    dailyOne: "",
-    dailyTwo: "",
-    dailyThree: "",
-    dailyFour: "",
-    dailyFive: "",
-    dailySix: "",
-    dailySeven: "",
-    dailyEight: "",
+    daily1: "",
+    daily2: "",
+    daily3: "",
+    daily4: "",
+    daily5: "",
+    daily6: "",
+    daily7: "",
+    daily8: "",
   }
+
 
   const [theme, setTheme] = useState("dark");
   const [initialGoals, setInitialGoals] = useState(initialBlank) 
 
+
   const value = {
     theme,
     setTheme,
+    initialGoals,
+    setInitialGoals,
   };
 
   return (

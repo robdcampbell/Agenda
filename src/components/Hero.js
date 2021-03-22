@@ -2,7 +2,7 @@ import React from "react";
 import { useAgenda } from "../context/AgendaContext.js";
 
 const Header = () => {
-  let { theme, setTheme } = useAgenda();
+  let {setTheme } = useAgenda();
 
   return (
     <section className="heading__section">
