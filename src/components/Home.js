@@ -7,20 +7,27 @@ import SegmentFeed from "./SegmentFeed";
 import Footer from "./Footer";
 
 const Home = () => {
-  const { theme, setTheme } = useAgenda();
+  let { theme } = useAgenda();
 
   return (
     <>
-      <div className="App">
+      <main
+        className={
+          theme === "dark"
+            ? "App dark__theme"
+            : (theme = "red"
+                ? "App red__theme"
+                : (theme = "red" ? "App red__theme" : "App dark__theme"))
+        }
+      >
         <div className="wrapper__main">
           <Hero />
           <Intro />
-          {/* <FlipTest />  NOT WORKING */}
           <SegmentFeed />
           <IdeaBoard />
           <Footer />
         </div>
-      </div>
+      </main>
     </>
   );
 };

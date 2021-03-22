@@ -39,6 +39,7 @@ Global Styles
 */
 
 body {
+  padding: 0;
   background: var(--white-2);
   /* background: var(--rc-bg-light); */
   /* background: var(--rc-bg-dark); */
@@ -58,6 +59,8 @@ code {
 }
 
 .App {
+  top: 0;
+  height: 100%;
   margin: 0 auto;
 }
 .wrapper__main {
@@ -97,7 +100,7 @@ THEMES - color modes set by user
   background: var(--rc-bg-light);
   color: var(--white-1);
 }
-.pomodoro__theme {
+.red__theme {
   background: var(--rc-main-red);
 }
 
@@ -316,6 +319,20 @@ Intro
   padding: 0.25rem;
   color: var(--white-1);
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.submitGoals__btn{
+  cursor: pointer;
+  margin-top: 1.5rem;
+  background: none;
+  border: var(--white-2) solid 1px;
+  border-radius: .25rem;  
+  padding: 1rem;
+  color: var(--white-1);
+  font-size: 1rem;
+}
+.submitGoals__btn:hover {
+  color: var(--white-3);
 }
 
 @media screen and (max-width: 800px) {

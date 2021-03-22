@@ -2,7 +2,7 @@ import React from "react";
 import { useAgenda } from "../context/AgendaContext.js";
 
 const Header = () => {
-  const { theme, setTheme } = useAgenda();
+  let { theme, setTheme } = useAgenda();
 
   return (
     <section className="heading__section">
@@ -12,14 +12,13 @@ const Header = () => {
           <h3>smaller parts.</h3>
         </div>
         <div className="heading__right">
-          <p>cur:{theme}</p>
           <p>mode:</p>
           <button type="button" onClick={(e) => setTheme("dark")}>
             dark
           </button>
           <p>|</p>
-          <button onClick={(e) => setTheme("light")}>light</button>
-          <p>|</p>
+          {/* <button onClick={(e) => setTheme("light")}>light</button>
+          <p>|</p> */}
           <button onClick={(e) => setTheme("red")}>R.</button>
         </div>
       </div>

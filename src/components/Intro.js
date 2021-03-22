@@ -3,6 +3,10 @@ import React, { useState } from "react";
 const Intro = () => {
   const [showDaily, setShowDaily] = useState(false);
 
+  const submitGoals = ()=>{
+    console.log("Goals test...")
+  }
+
   return (
     <section className="intro__section">
       <div className="intro__titles">
@@ -24,9 +28,15 @@ const Intro = () => {
           </p>
         </div>
         <button type="button" onClick={(e) => setShowDaily(!showDaily)}>
-          <h3 className="add__ideas add__daily">
+          {!showDaily ? (
+            <h3 className="add__ideas add__daily">
             <span>+</span> Set initial goals.
           </h3>
+          ) : (
+            <h3 className="add__ideas add__daily">
+            <span>-</span> Hide initial goals.
+          </h3>
+          ) }
         </button>
       </div>
 
@@ -64,7 +74,8 @@ const Intro = () => {
           <label htmlFor="">_08:</label>
           <input type="text" />
         </div>
-      </div>
+         <button type="button" className="submitGoals__btn" onClick={(e)=>submitGoals()} >Submit Daily Goals</button>
+      </div> 
     </section>
   );
 };
