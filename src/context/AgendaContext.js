@@ -26,10 +26,20 @@ export const AgendaProvider = ({ children }) => {
     daily7: "seven",
     daily8: "eight",
   }
+  const initialTest = [
+    "1 1 1",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+  ]
 
   const [theme, setTheme] = useState("dark");
   const [initialGoals, setInitialGoals] = useState(initialSetValues) 
-  const [dailyGoals, setDailyGoals] = useState(initialSetValues) 
+  const [dailyGoals, setDailyGoals] = useState(initialTest) 
 
 
   const value = {

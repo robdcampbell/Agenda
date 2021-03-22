@@ -4,8 +4,19 @@ import {useAgenda} from '../context/AgendaContext'
 const Segment = ({ index }) => {
   const [toggleHidden, setToggleHidden] = useState(true);
   const {dailyGoals, setDailyGoals} = useAgenda();
+  const [segmentGoal, setSegmentGoal] = useState(dailyGoals[index])
   
-  const dailySegment = `daily${index+1}`
+  // const dailySegment = `daily${index+1}`
+  // const dailySegment = dailyGoals[index];
+
+  const updateText = (e)=>{
+      console.log(dailyGoals);
+
+      setDailyGoals(state => {
+        state[index]= segmentGoal;
+        return state;
+      })
+  }
 
   return (
     <section className="hr__segment" id={`section${index + 1}`}>
@@ -37,10 +48,8 @@ const Segment = ({ index }) => {
         <div className="segment__content">
           <h3>Description:</h3>
           <input  className="segment__text"
-           value={dailyGoals[dailySegment]} onChange={(e)=> setDailyGoals(state => (
-             {...state,
-              test: "test"}
-           ) )} />
+           value={segmentGoal} onChange={(e)=> setSegmentGoal(e.target.value)} />
+          <button type="button" onClick={(e)=>updateText(e)}>Update</button>
         </div>
       </div>
     </section>
