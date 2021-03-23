@@ -16,18 +16,18 @@ export const useAgenda = () => {
 
 export const AgendaProvider = ({ children }) => {
 
-  const initialSetValues = {
-    daily1: "one",
-    daily2: "two",
-    daily3: "three",
-    daily4: "four",
-    daily5: "five",
-    daily6: "six",
-    daily7: "seven",
-    daily8: "eight",
-  }
-  const initialTest = [
-    "1 1 1",
+  const initialSetValues = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ]
+  const initialDaily = [
+    "one",
     "two",
     "three",
     "four",
@@ -39,7 +39,7 @@ export const AgendaProvider = ({ children }) => {
 
   const [theme, setTheme] = useState("dark");
   const [initialGoals, setInitialGoals] = useState(initialSetValues) 
-  const [dailyGoals, setDailyGoals] = useState(initialTest) 
+  const [dailyGoals, setDailyGoals] = useState(initialDaily) 
 
 
   const value = {

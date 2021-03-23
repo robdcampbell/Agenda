@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import {useAgenda} from '../context/AgendaContext'
+import InitialGoal from "./InitialGoal";
 
 const Intro = () => {
   const [showDaily, setShowDaily] = useState(false);
-  const {initialGoals, setInitialGoals} = useAgenda();
+  const {initialGoals, setDailyGoals} = useAgenda();
   
 
   const submitGoals = ()=>{
-    console.log("Goals test...")
+    console.log(initialGoals);
+    setDailyGoals(initialGoals);
   }
 
   return (
     <section className="intro__section">
       <div className="intro__titles">
-        <h2>Segments: </h2>
         <h2>Pomodoro.</h2>
       </div>      
 
@@ -47,7 +48,15 @@ const Intro = () => {
       <div className={showDaily ? "daily__goals" : "hidden"}>
         <h3>Tackle today.</h3>
         
-        {/* WILL REFASCTOR WITH AN 'INITAL GOAL COMPONENT' */}
+        {/* WILL REFASCTOR WITH AN 'INITIAL GOAL COMPONENT' */}
+        
+        {initialGoals.map((x, index) =>(
+          <InitialGoal key={index} index={index} />
+        ))
+      }
+
+{/*         
+
         <div className="goals">
           <label htmlFor="">_01:</label>
           <input type="text" value={initialGoals.daily1} onChange={(e)=> setInitialGoals(initialState => ({
@@ -110,7 +119,7 @@ const Intro = () => {
             ...initialState,
             daily8: e.target.value
           }))} />
-        </div>
+        </div> */}
 
          <button type="button" className="submitGoals__btn" onClick={(e)=>submitGoals()} >Submit Daily Goals</button>
       </div> 
